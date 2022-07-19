@@ -1,5 +1,5 @@
 //Require modules 
-const express = require('express')\
+const express = require('express')
 
 //Initialize the app variable
 const app = express()
