@@ -1,23 +1,32 @@
 //Require modules 
 const express = require('express')
+require('dotenv').config()
+const methodOverride = require('method-override')
+
 
 //Initialize the app variable
 const app = express()
 
-//homepage
-app.get('/', function(req, res) {
-    res.send('Hello World!')
+
+// Express Settings
+app.set('views', __dirname + '/views')
+app.set('view engine', 'jsx')
+app.engine('jsx', require('express-react-views').createEngine())
+app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
+
+
+//Controllers & Routes
+app.use('/places', require('./controllers/places'))
+
+app.get('/', (req,res) => {
+    res.render('home')
 })
 
-//secondpage
-app.get('/second', function(req, res){
-    res.send('Second Page!')
-})
-
-//thirdpage
-app.get('/third', function(req, res){
-    res.send('Third Page!')
+app.get('*', (req,res) => {
+    res.render('error404')
 })
 
 //Port the server will listen on
-app.listen(3000)
+app.listen(process.env.PORT)
