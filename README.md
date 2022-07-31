@@ -9,3 +9,4 @@ Added environment file for constant variables (Port)
 Added public folder and images along with CSS styles sheet
 Updated index to accomidate for new routes and jsx files
 Added places controller
+Added the server.js file 
