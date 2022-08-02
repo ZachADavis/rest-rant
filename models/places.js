@@ -1,7 +1,7 @@
 module.exports = [{
-    name: 'H-Thai-ML',
-    city: 'Seattle',
-    state: 'WA',
+    name: 'Starbucks',
+    city: 'Virginia',
+    state: 'VA',
     cuisines: 'Thai, Pan-Asian',
     pic: '/images/coffee-mug-in-coffee-shop.jpg'
 }, {
