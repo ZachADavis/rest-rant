@@ -10,3 +10,5 @@ Added public folder and images along with CSS styles sheet
 Updated index to accomidate for new routes and jsx files
 Added places controller
 Added the server.js file 
+Added seeders
+Added models 
